@@ -1,0 +1,49 @@
+:root {
+  --xs: 0.5rem;
+  --sm: 1rem;
+  --md: 1.5rem;
+  --lg: 2rem;
+  --xl: 3rem;
+  --xxl: 4rem;
+  --xxxl: 5rem;
+
+  --font-family: "Roboto", sans-serif;
+
+  --primary: 238.73 83.53% 66.67%;
+  --primary-color-h: 238.73;
+  --primary-color-s: 83.53%;
+  --primary-color-l: 66.67;
+  --primary-color-l-10: 77.67;
+
+  --primary-foreground: 0 0% 98%;
+
+  --background-color: #f4f4f5;
+  --text-color: #09090b;
+
+  --bg-header: #e4e4e7;
+
+  --primary-color: hsl(
+    var(--primary-color-h),
+    var(--primary-color-s),
+    calc(var(--primary-color-l) * 1%)
+  );
+  --primary-color-10: hsl(
+    var(--primary-color-h),
+    var(--primary-color-s),
+    calc(var(--primary-color-l-10) * 1%)
+  );
+  --hover-color: hsl(
+    var(--primary-color-h),
+    var(--primary-color-s),
+    calc(var(--primary-color-l-10) * 1%)
+  );
+
+  --ring: 240 5% 65%;
+  --ring-offset-width: 0px;
+  --ring-offset-color: #fff;
+  --ring-color: rgb(59 130 246 / 0.5);
+  --ring-offset-shadow: 0 0 #0000;
+  --ring-shadow: 0 0 #0000;
+  --shadow: 0 0 #0000;
+  --shadow-colored: 0 0 #0000;
+}

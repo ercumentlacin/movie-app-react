@@ -1,0 +1,156 @@
+.movie-list-page {
+  display: grid;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  gap: 1.5rem;
+  max-width: 80rem;
+  flex: 1;
+  width: 100%;
+  margin-inline: auto;
+  padding-block: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 2rem;
+  }
+
+  > header {
+    display: grid;
+    gap: 0.5rem;
+
+    h1 {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      color: #6b7280;
+    }
+  }
+  header + section {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .filter-favorite {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    height: 1.6rem;
+
+    > span {
+      line-height: 1.6rem;
+    }
+  }
+
+  .sort-by {
+    position: relative;
+    label {
+      border: hsl(0, 0%, 80%) 1px solid;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+
+      transition: box-shadow 0.2s ease;
+
+      &:hover {
+        box-shadow: 0 0 0 1px hsl(0, 0%, 90%);
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked + .options {
+      display: block;
+      visibility: visible;
+      width: 10rem;
+    }
+
+    .options {
+      list-style: none;
+      display: none;
+      visibility: hidden;
+      position: absolute;
+      top: 2.2rem;
+      left: 0;
+      background-color: hsl(240deg 5% 96%);
+      border: hsl(0, 0%, 80%) 1px solid;
+      border-radius: 0.5rem;
+      z-index: 99999;
+      width: 0;
+      overflow: hidden;
+      padding: 0.5rem;
+
+      li {
+        padding: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0.5rem;
+
+        &:hover {
+          background-color: hsl(0, 0%, 90%);
+        }
+
+        svg {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.movie-list-page[data-no-movies="true"] {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: #6b7280;
+  }
+
+  .not-found {
+    flex: 1;
+    width: 100%;
+    margin-block: 3rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: hsl(240deg 5% 96%);
+    border: hsl(0, 0%, 80%) 1px solid;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+    color: hsl(0, 0%, 20%);
+
+    &:hover {
+      box-shadow: 0 0 0 1px hsl(0, 0%, 90%);
+    }
+  }
+}
