@@ -4,9 +4,9 @@ import { Provider } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { store } from "./app/store.ts";
 import MainLayout from "./components/shared/layout/main-layout.tsx";
-import HomeErrorPage from "./routes/error-page.tsx";
 import LoginPage from "./routes/login/login.tsx";
 import MovieDetailPage from "./routes/movie/[id]/page.tsx";
+import NotFoundPage from "./routes/not-found/not-found.tsx";
 import HomePage from "./routes/page.tsx";
 import "./styles/global.css";
 
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <MainLayout />,
-		errorElement: <HomeErrorPage />,
+		errorElement: <NotFoundPage />,
 		children: [
 			{
 				path: "/",
